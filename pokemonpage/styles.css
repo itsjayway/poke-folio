@@ -1,0 +1,196 @@
+@font-face {
+  font-family: 'pokefon';
+  src: url('fonts/pokemon-gb-font/PokemonGb-RAeo.ttf');
+}
+.text {
+  font-family: "pokefon";
+}
+#togg {
+  position: absolute;
+  z-index: 6;
+}
+audio {
+  display: none;
+}
+#hp {
+  top: 8.55vw;
+  left: 21.3vw;
+  position: absolute;
+  background-color: rgb(135, 201, 160);
+  width: 12vw;
+  height: 1.3vw;
+  z-index: 8;
+  border-radius: 400px;
+}
+#hp-num {
+  font-family: 'pokefon';
+  position: absolute;
+  font-size: 2vw;
+  top: 8.9vw;
+  left: 26.2vw;
+  bottom: 400vw;
+}
+
+#attack {
+  display: none;
+  position: absolute;
+  top: 26vw;
+  left: 30vw;
+  width: 3vw;
+  height: 3vw;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+#container {
+  position: relative;
+}
+
+#choice-container {
+  position: absolute;
+  /* border: solid black 1px; */
+
+  top: 40.9vw;
+  left: 6.5vw;
+  width: 55%;
+  height: 13.8vw;
+  z-index: 1;
+}
+
+#easter-info {
+  position: absolute;
+  /* border: solid black 1px; */
+  font-size: 2vw;
+  top: 37.9vw;
+  width: 24%;
+  height: 13.8vw;
+  left: 65.5vw;
+  line-height: 6vw;
+  text-overflow: ellipsis;
+}
+
+/* TODO: add arrow or box around choice */
+#easter-resume {}
+
+#easter-experience {}
+
+#easter-projects {}
+
+#easter-about {}
+
+.choice {
+  font-size: 2.5vw;
+  font-family: "pokefon";
+  margin: 3vw;
+}
+
+.choice:hover {
+  color: gray;
+}
+
+#choice-grid {
+  z-index: -1;
+  display: grid;
+  grid-column-gap: 0px;
+  line-height: 0;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
+#resume-text:hover {}
+
+#experience-text:hover {}
+
+#projects-text:hover {}
+
+#about-text:hover {}
+
+#modal-popup {
+  display: none;
+  z-index: 10;
+  width: 100%;
+  height: 120%;
+  background-color: rgba(0, 0, 0, .7);
+  position: absolute;
+  top: 0;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content-resume {
+  display: none;
+  position: relative;
+  width: 80vw;
+  max-width: 95%;
+  height: 50%;
+  /* background-color: rgba(255,255,255,1); */
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0;
+}
+
+.modal-content-experience {
+  display: none;
+  position: relative;
+  width: 80vw;
+  max-width: 90%;
+  min-height: 60%;
+  /* background-color: rgba(255,255,255,1); */
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0;
+}
+
+#form-contents {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0 auto;
+  max-height: inherit;
+}
+#submit {
+  margin: auto;
+}
+
+.popup {
+  /* visibility: hidden; */
+}
+
+.button-group {
+  /* display: flex;
+  flex-direction: row */
+  position: absolute;
+  right: 1vw;
+  /* background-color: yellow; */
+}
+#mute {
+  position: absolute;
+  width: 4vw;
+  height: 4vw;
+}
+.carc-title {
+  font-family: Ubuntu;
+}
+
+#resume-close {}
+
+.close {
+  position: relative;
+  top: 10px;
+  right: 0;
+}
+
+#resume-pdf {
+  width: 80vw;
+  max-height: 100%;
+  overflow: scroll;
+}
+
+#base {
+  position: absolute;
+  right: 2vw;
+  top: -.6vw;
+  width: 100%;
+}
