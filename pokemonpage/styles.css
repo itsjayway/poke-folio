@@ -117,6 +117,17 @@ audio {
   justify-content: center;
   align-items: center;
 }
+li {
+  text-align: center;
+}
+#exp-list, #exp-list2 {
+  display: block;
+  list-style: none;
+}
+
+#lst-div {
+  text-align: center;
+}
 
 .modal-content-resume {
   display: none;
