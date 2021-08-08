@@ -8,7 +8,7 @@
 
 <body>
   <section>
-    <audio loop id="welcomeSound" controls="controls" preload="auto">
+    <audio autoplay loop id="welcomeSound" controls="controls" preload="auto">
       <!-- add autoplay to above line to have music -->
       <source src="audio/battle-music.mp3">
       </source>
@@ -35,8 +35,9 @@
       </div>
     </td>
   </section>
-  <div id="container">
 
+  <p style="font-size: 10px;">This site is currently a work-in-progress. Thanks for stopping by!</p><br>
+  <div id="container">
     <img id="base" src="base-most-final1.png">
 
     <div id="hp">
@@ -66,7 +67,7 @@
     </div>
 
   </div>
-  <div id="modal-popup" class="modal popup">
+  <div id="modal-popup" class="modal-popup">
     <div id="modal-resume" class="modal-content-resume popup">
       <div class="button-group">
         <a href="https://web.njit.edu/~jga26/download/resume.pdf" target="_blank"><button id="resume-full" class="close">Open in New Tab</button></a>
@@ -90,26 +91,27 @@
             <li>Java</li>
             <li>C++</li>
             <li>HTML/CSS/JS</li>
-            <li>Adobe Suite</li>
+            <li>Adobe Suite</li><br>
           </ul>
         </div>
 
         <div class="in-lst-div">
           <ul id="exp-list2" class="modal-desc">
             <li>
-              <h3 class="exp-title">In the works...</h3>
+              <h3 id="exp-title2" class="exp-title">WIP...</h3>
             </li>
             <li>Android</li>
             <li>PHP</li>
-            <li>Unity/C#</li>
+            <li>Unity/C#</li><br>
           </ul>
         </div>
+        <!-- <h3 id="coming-soon">More to come!</h3> -->
       </div>
 
 
 
-
       </ul>
+
     </div>
 
     <div id="modal-projects" class="modal-content-experience modal-content-projects popup">
@@ -174,24 +176,48 @@
     <div id="modal-about" class="modal-content-experience popup">
       <button id="about-close" class="close">Close</button>
       <h1 id="about-title" class="carc-title">About</h1>
+      <div id="about-div">
+        <h2 class="about-title">Who?</h2>
+        <p class="about-desc">I'm Jibran Absarulislam, and I'm a Junior at NJIT studying Computer Science and Information Technology.</p>
+        <h2 class="about-title">What?</h2>
+        <p class="about-desc">I'm interested in all things tech, specifically:</p>
+        <ul id="about-list">
+          <li>Cybersecurity</li>
+          <li>Software Development</li>
+          <li>Application Development</li>
+        </ul>
+        <h2 class="about-title">Where?</h2>
+        <p class="about-desc">I'm located in the tri-state area, but am interested in relocation during the Summer and Winter.</p>
+        <h2 class="about-title">Why?</h2>
+        <p class="about-desc">I was lucky to enter high school around
+          the time of the
+          <a href="https://www.bbc.com/news/world-us-canada-23123964">Snowden incident</a>, introducing me
+          to the world of technology and security. I find it very important that users and consumers are
+          aware of the way their data is handled and who has access to it. My career goal is to provide my users with
+          the reassurance everyone deserves.
+        </p>
+        <h2 class="about-title">How?</h2>
+        <p class="about-desc">Learning through my projects and work experience!</p>
+      </div>
     </div>
 
-    <div id="modal-final" class="modal-content-experience popup">
-      <a href="../index.html"><button id="final-close" class="close">Back to Home</button></a>
-      <h1 id="final-title" class="carc-title">You win!</h1>
-      <p id="final-desc">Please consider contacting me ^_^ Thanks for stopping by!</p>
-      <form action="mailto:jga26@njit.edu" method="post" enctype="text/plain">
-        <div id="form-contents">
-          Name: <input type="text" name="sender_name" required> <br>
-          Company (optional): <input type="text" name="sender_company"> <br>
-          Message: <textarea type="text" name="sender_message" required> </textarea><br>
-        </div>
-        <button id="submit" type="submit">Send</button>
+
+      <div id="modal-final" class="modal-content-experience popup">
+        <a href="../index.html"><button id="final-close" class="close">Back to Home</button></a>
+        <h1 id="final-title" class="carc-title">You win!</h1>
+        <p id="final-desc">Please consider contacting me ^_^ Thanks for stopping by!</p>
+        <form action="mailto:jga26@njit.edu" method="post" enctype="text/plain">
+          <div id="form-contents">
+            Name: <input type="text" name="sender_name" required> <br>
+            Company (optional): <input type="text" name="sender_company"> <br>
+            Message: <textarea type="text" name="sender_message" required> </textarea><br>
+          </div>
+          <button id="submit" type="submit">Send</button>
 
 
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
 </body>
 
 </html>
@@ -200,8 +226,13 @@
   function toggleSound(img) {
     img.src = img.src == "http://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Speaker_Icon.svg/500px-Speaker_Icon.svg.png" ? "https://cdn2.iconfinder.com/data/icons/picons-essentials/57/music_off-512.png" :
       "http://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Speaker_Icon.svg/500px-Speaker_Icon.svg.png";
-    var sound = document.getElementById("welcomeSound");
-    sound.muted = sound.muted == true ? false : true;
+    // var sound = document.getElementById("welcomeSound");
+    // sound.muted = sound.muted == true ? false : true;
+    if (img.src == "http://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Speaker_Icon.svg/500px-Speaker_Icon.svg.png") {
+      resumeAll();
+    } else {
+      muteAll();
+    }
   }
   window.onload = function() {
     // collecting elements
@@ -402,5 +433,31 @@
   function draw(timePassed) {
     document.getElementById("attack").style.left = 30 + timePassed / 15 + 'vw';
     document.getElementById("attack").style.top = 26 + 3 - timePassed / 25 + 'vw';
+  }
+
+  function mute(sound) {
+    sound.muted = true;
+    sound.pause();
+  }
+
+  function unmute(sound) {
+    sound.muted = false;
+  }
+
+  function muteAll() {
+    var sounds = document.querySelectorAll("audio");
+
+    [].forEach.call(sounds, function(sound) {
+      mute(sound);
+    });
+  }
+
+  function resumeAll() {
+    var sounds = document.querySelectorAll("audio");
+
+    [].forEach.call(sounds, function(sound) {
+      unmute(sound);
+    });
+    document.getElementById("welcomeSound").play();
   }
 </script>
