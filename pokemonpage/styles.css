@@ -38,7 +38,7 @@ body {
 
 #togg {
   position: absolute;
-  z-index: 6;
+  z-index: 7;
 }
 
 audio {
@@ -166,8 +166,15 @@ audio {
 
 
 .exp-title {
-  /* text-align: center; */
+  text-align: center;
   font-family: "pokefon";
+
+}
+
+li {
+  font-size: 3.1vw;
+  font-family: "Calibri", sans-serif;
+
 }
 
 #lst-div {
@@ -288,6 +295,17 @@ ul {
 
 .modal-content-projects {
   text-align: center;
+}
+#about-div {
+  width: auto;
+  padding: 2vw;
+}
+.about-desc {
+  font-family: Calibri;
+}
+.about-title {
+  margin-left: 4px;
+  font-family: 'pokefon';
 }
 
 #form-contents {
