@@ -2,16 +2,20 @@
   font-family: 'pokefon';
   src: url('fonts/pokemon-gb-font/PokemonGb-RAeo.ttf');
 }
+
 .text {
   font-family: "pokefon";
 }
+
 #togg {
   position: absolute;
   z-index: 6;
 }
+
 audio {
   display: none;
 }
+
 #hp {
   top: 8.55vw;
   left: 21.3vw;
@@ -22,6 +26,7 @@ audio {
   z-index: 8;
   border-radius: 400px;
 }
+
 #hp-num {
   font-family: 'pokefon';
   position: absolute;
@@ -49,7 +54,6 @@ audio {
 #choice-container {
   position: absolute;
   /* border: solid black 1px; */
-
   top: 40.9vw;
   left: 6.5vw;
   width: 55%;
@@ -115,18 +119,120 @@ audio {
   top: 0;
   /* display: flex; */
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
-li {
-  text-align: center;
-}
+
 #exp-list, #exp-list2 {
-  display: block;
   list-style: none;
 }
 
+.exp-title {
+  /* text-align: center; */
+  font-family: "pokefon";
+}
+
 #lst-div {
+  border: black 1px solid;
+  width: 50%;
+  display: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  /* text-align: left; */
+}
+
+.in-lst-div {
+  display: absolute;
+  border: red 1px solid;
+  /* text-align: center;
+  align-items: center; */
+  /* align-items: center; */
+  margin: 0 auto 0 auto;
+  width: 30vw;
+}
+
+.project-grid {
+  display: flex;
+  width: 50%;
+  padding: 10px;
+  grid-template-columns: 30%, 30%;
+  grid-template-columns: 20%, 20%, 20%;
+  grid-gap: auto;
+  position: relative;
+}
+
+.tile-image {
+  display: none;
+}
+
+.project-title {
+  font-size: 2.5vw;
+  font-family: "pokefon";
+}
+
+.tilec {
+  color: #000;
   text-align: center;
+  width: 100%;
+  max-height: 100%;
+}
+
+.description {
+  display: block;
+  height: 40px;
+  font-size: 20px;
+  font-family: Calibri;
+  font-style: oblique;
+  width: 100%;
+  color: var(--tile-text);
+  margin-bottom: 0;
+  /* text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; */
+  /* background: linear-gradient(0deg, #cdd9ed, #949cdf) */
+}
+
+:root {
+  --r1: 143;
+  --g1: 41;
+  --b1: 36;
+  --proj1: rgb(var(--r1), var(--g1), var(--b1));
+  --r2: 96;
+  --g2: 39;
+  --b2: 32;
+  --proj2: rgb(var(--r2), var(--g2), var(--b2));
+  --r3: 40;
+  --g3: 75;
+  --b3: 99;
+  --proj3: rgb(var(--r3), var(--g3), var(--b3));
+  --r4: 0;
+  --g4: 118;
+  --b4: 180;
+  --proj4: rgb(var(--r4), var(--g4), var(--b4));
+}
+
+.d1, .d3, .d5 {
+  color: var(--proj1);
+}
+
+.d1 .description, .d3 .description, .d5 .description {
+  color: var(--proj2);
+  /* margin-bottom: 10px; */
+}
+
+.d2, .d4, .d6 {
+  color: var(--proj3);
+}
+
+.d2 .description, .d4 .description, .d6 .description {
+  color: var(--proj4);
+  /* margin-bottom: 10px; */
+}
+
+.description:hover {
+  /* background: linear-gradient(0deg, #cdd9ed, #949cdf)
+  overflow: visible;
+  white-space: normal;
+  height: auto; */
 }
 
 .modal-content-resume {
@@ -148,11 +254,17 @@ li {
   width: 80vw;
   max-width: 90%;
   min-height: 60%;
+  max-height: 50%;
+  overflow: scroll;
   /* background-color: rgba(255,255,255,1); */
   background-color: white;
   border-radius: 5px;
-  text-align: center;
+  /* text-align: center; */
   padding: 0;
+}
+
+.modal-content-projects {
+  text-align: center;
 }
 
 #form-contents {
@@ -161,11 +273,14 @@ li {
   margin: 0 auto 0 auto;
   max-height: inherit;
 }
+
 #submit {
   margin: auto;
 }
 
 .popup {
+  position: absolute;
+  top: 4vw;
   /* visibility: hidden; */
 }
 
@@ -176,19 +291,30 @@ li {
   right: 1vw;
   /* background-color: yellow; */
 }
+
 #mute {
   position: absolute;
   width: 4vw;
   height: 4vw;
 }
+
 .carc-title {
-  font-family: Ubuntu;
+  text-align: center;
+  font-family: 'Lexend Mega', sans-serif;
 }
 
 #resume-close {}
 
+#projects-close {}
+
+#experience-close {
+  float: right;
+}
+
+#about-close {}
+
 .close {
-  position: relative;
+  position: absolute;
   top: 10px;
   right: 0;
 }

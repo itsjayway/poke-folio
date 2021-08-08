@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
 <body>
@@ -79,27 +80,30 @@
       <button id="experience-close" class="close">Close</button>
       <h1 id="experience-title" class="carc-title">Experience</h1>
       <div id="lst-div">
-        <ul id="exp-list" class="modal-desc">
-          <li>
-            <h3>Confident!</h3>
-          </li>
-          <div class="al">
+        <div class="in-lst-div">
+          <ul id="exp-list" class="modal-desc">
+            <li>
+              <h3 class="exp-title">Confident!</h3>
+            </li>
+
             <li>Python</li>
             <li>Java</li>
             <li>C++</li>
             <li>HTML/CSS/JS</li>
             <li>Adobe Suite</li>
-          </div>
-        </ul>
-        <br>
-        <ul id="exp-list2" class="modal-desc">
-          <li>
-            <h3>In the works...</h3>
-          </li>
-          <li>Android</li>
-          <li>PHP</li>
-          <li>Unity/C#</li>
-        </ul>
+          </ul>
+        </div>
+
+        <div class="in-lst-div">
+          <ul id="exp-list2" class="modal-desc">
+            <li>
+              <h3 class="exp-title">In the works...</h3>
+            </li>
+            <li>Android</li>
+            <li>PHP</li>
+            <li>Unity/C#</li>
+          </ul>
+        </div>
       </div>
 
 
@@ -108,9 +112,63 @@
       </ul>
     </div>
 
-    <div id="modal-projects" class="modal-content-experience popup">
+    <div id="modal-projects" class="modal-content-experience modal-content-projects popup">
       <button id="projects-close" class="close">Close</button>
       <h1 id="projects-title" class="carc-title">Projects</h1>
+
+      <section id="projects">
+        <!-- <h1 id="projects-title">Feel free to explore below!</h1> -->
+        <div class="projects-grid">
+          <a href="https://github.com/League-Application/Yuumi.GG-Android-App" target="_blank" class="project-tile">
+            <div class="d1 tilec row1">
+              <h2 class="project-title">YUUMI.GG</h2>
+              <p class="description">A League of Legends Statistics Comparison app for Android that compares user stats</p><br>
+              <img class="tile-image fix" src="https://github.com/League-Application/Yuumi.GG-Android-App/blob/main/Untitled4.gif?raw=true">
+            </div>
+          </a>
+          <a href="https://github.com/jibranabsarulislam/MD5pass-crack-py" target="_blank" class="project-tile">
+            <div class="d2 tilec row1">
+              <h2 class="project-title">MD5pass-crack-py</h2>
+              <p class="description">Python MD5 Password Crack leveraging hashcat</p><br>
+              <img class="tile-image" src="https://raw.githubusercontent.com/jibranabsarulislam/MD5pass-crack-py/master/capture1.PNG">
+
+            </div>
+          </a>
+
+          <a href="https://github.com/jibranabsarulislam/VaxMan-cpp-" target="_blank" class="project-tile">
+            <div class="d3 tilec row2">
+              <h2 class="project-title">VaxMan-cpp-</h2>
+              <p class="description">Project converting the classic PacMan game into "VaxMan" erases duplicating ghosts!</p><br>
+              <img class="tile-image" src="https://github.com/jibranabsarulislam/VaxMan-cpp-/blob/master/walkthrough.gif.gif?raw=true">
+
+            </div>
+          </a>
+          <a href="https://github.com/jibranabsarulislam/PowerPainter" target="_blank" class="project-tile">
+            <div class="d4 tilec row2">
+              <h2 class="project-title">PowerPainter</h2>
+              <p class="description">Unity/C# Project to explore basic game development</p><br>
+              <img class="tile-image" src="https://camo.githubusercontent.com/2ce98ccc5e19208fb09a1d0a7e085111e514f8c20bf6ac3313e01a4102cf7331/68747470733a2f2f692e696d6775722e636f6d2f5068344c7755352e706e67">
+
+            </div>
+          </a>
+          <a href="https://github.com/jibranabsarulislam/IT202" target="_blank" class="project-tile">
+            <div class="d5 tilec row3">
+              <h2 class="project-title">IT202</h2>
+              <p class="description">SQL & PHP project involving database lookup, 2FA, and data querying</p><br>
+              <img class="tile-image fix" src="https://i.imgur.com/3CJPrhb.png">
+
+            </div>
+          </a>
+          <a href="https://github.com/jibranabsarulislam/IT114001" target="_blank" class="project-tile">
+            <div class="d6 tilec row3">
+              <h2 class="project-title">IT114</h2>
+              <p class="description">Java coursework that emphasized Socket-Client to Server interactions and user-interface</p><br>
+              <img class="tile-image" src="https://camo.githubusercontent.com/9439445490a248f62abd24d447addd7180d3dfec879c0e6ed7751cbea302d2b4/68747470733a2f2f696d6775722e636f6d2f356e6b653957422e706e67">
+            </div>
+          </a>
+        </div>
+      </section>
+
     </div>
 
     <div id="modal-about" class="modal-content-experience popup">
