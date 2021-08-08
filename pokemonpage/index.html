@@ -6,6 +6,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <!-- <script type = "text/javascript" src = "script.js"/></script> -->
+  <title>Jibran</title>
+</head>
 
 <body>
   <section>
@@ -208,22 +210,23 @@
     </div>
 
 
-      <div id="modal-final" class="modal-content-experience popup">
-        <a href="../index.html"><button id="final-close" class="close">Back to Home</button></a>
-        <h1 id="final-title" class="carc-title">You win!</h1>
-        <p id="final-desc">Please consider contacting me ^_^ Thanks for stopping by!</p>
-        <form action="mailto:jga26@njit.edu" method="post" enctype="text/plain">
-          <div id="form-contents">
-            Name: <input type="text" name="sender_name" required> <br>
-            Company (optional): <input type="text" name="sender_company"> <br>
-            Message: <textarea type="text" name="sender_message" required> </textarea><br>
-          </div>
-          <button id="submit" type="submit">Send</button>
+    <div id="modal-final" class="modal-content-experience popup">
+      <a href="../index.html"><button id="final-close" class="close">Back to Home</button></a>
+      <h1 id="final-title" class="carc-title">You win!</h1>
+      <p id="final-desc">Please consider contacting me ^_^ Thanks for stopping by!</p>
+      <p>(Message is not encrypted!)</p>
+      <form action="email.php" method="get" enctype="text/plain">
+        <div id="form-contents">
+          Name: <input type="text" name="sender_name" required> <br>
+          Company (optional): <input type="text" name="sender_company"> <br>
+          Message: <textarea type="text" name="sender_message" required> </textarea><br>
+        </div>
+        <button id="submit" type="submit">Send</button>
 
 
-        </form>
-      </div>
+      </form>
     </div>
+  </div>
 </body>
 
 </html>
@@ -248,8 +251,7 @@
       music_on;
     if (img.src == music_on) {
       resumeAll();
-    }
-    else {
+    } else {
       document.getElementById("welcomeSound").pause();
     }
 
