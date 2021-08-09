@@ -43,7 +43,7 @@
     </td>
   </section>
 
-  <p style="font-size: 10px;">This site is currently a work-in-progress. Thanks for stopping by!</p><br>
+  <!-- <p style="font-size: 10px;">This site is currently a work-in-progress. Thanks for stopping by!</p><br> -->
   <div id="container">
     <img id="base" src="base-most-final1.png">
 
@@ -58,10 +58,15 @@
 
     </div>
 
+    <div id="typewriter-id" class="typewriter">
+      <h1 id="typewriter-sentence"></h1>
+
+    </div>
+
     <div id="choice-container">
       <div id="choice-grid">
         <h2 id="resume-text" class="choice text" title="Your go-to!">RESUME</h2>
-        <h2 id="experience-text" class="choice" title="What am I up to?">EXPERIENCE</h2>
+        <h2 id="experience-text" class="choice" title="What am I up to?">SKILLS</h2>
         <h2 id="projects-text" class="choice" title="Best of my best!">PROJECTS</h2>
         <h2 id="about-text" class="choice" title="A trip down memory lane...">ABOUT</h2>
       </div>
@@ -87,7 +92,7 @@
 
     <div id="modal-experience" class="modal-content-experience popup">
       <button id="experience-close" class="close">Close</button>
-      <h1 id="experience-title" class="carc-title">Experience</h1>
+      <h1 id="experience-title" class="carc-title">Skills</h1>
       <div id="lst-div">
         <div class="in-lst-div">
           <ul id="exp-list" class="modal-desc">
@@ -111,6 +116,18 @@
             <li>Android</li>
             <li>PHP</li>
             <li>Unity/C#</li><br>
+          </ul>
+        </div>
+
+        <div id="soft">
+          <ul id="exp-list3" class="modal-desc">
+            <li>
+              <h3 id="exp-title3" class="exp-title">Soft Skills</h3>
+            </li>
+            <li>Verbal and written communication</li>
+            <li>Highly flexible</li>
+            <li>Goal-oriented and self-motivated</li>
+            <li>Effective analytical and problem solving capability</li>
           </ul>
         </div>
         <!-- <h3 id="coming-soon">More to come!</h3> -->
@@ -258,16 +275,16 @@
 
   }
 
-  window.onload = function() {
-    // collecting elements
-    var welcomeSound = document.getElementById("welcomeSound");
-    var welcomeTxt = document.getElementById("resume-text");
-    //playing welcome sound on mouse over
-    welcomeTxt.onload = function() {
-      welcomeSound.play();
-      return false;
-    };
-  };
+  // window.onload = function() {
+  //   // collecting elements
+  //   var welcomeSound = document.getElementById("welcomeSound");
+  //   var welcomeTxt = document.getElementById("resume-text");
+  //   //playing welcome sound on mouse over
+  //   welcomeTxt.onload = function() {
+  //     welcomeSound.play();
+  //     return false;
+  //   };
+  // };
 
   function playAttack() {
     var attack_sound = document.getElementById("attack-sound");
@@ -315,6 +332,7 @@
     hideId = tempId;
     document.getElementById("modal-popup").style.display = "none";
     document.getElementById(hideId).style.display = "none";
+    document.getElementById("typewriter-sentence").style.display = "none";
     //test if hp-num == 0
     // then pop up final modal
     if (this.id != "resume-close") {
@@ -330,26 +348,43 @@
   function showModal() {
     attack();
     console.log("after attack");
-
+    if (this.id == "resume-text") {
+      tempId = "modal-resume";
+      typewriter_contents = "Jibran showed his resume!";
+    } else if (this.id == "experience-text") {
+      tempId = "modal-experience";
+      typewriter_contents = "Jibran did a back flip!";
+    } else if (this.id == "projects-text") {
+      tempId = "modal-projects";
+      typewriter_contents = "Jibran compiled a project!";
+    } else if (this.id == "about-text") {
+      tempId = "modal-about";
+      typewriter_contents = "Jibran told his past!";
+    }
+    var sent = document.getElementById("typewriter-sentence");
+    sent.style.display = "flex";
+    var typewriter_contents;
+    sent.innerHTML = typewriter_contents;
+    reset_animation();
 
     setTimeout(function() {
-      var ppNum;
-      console.log("inside timeout");
+      // var ppNum;
+      // console.log("inside timeout");
       document.getElementById("modal-popup").style.display = "flex";
-      if (this.id == "resume-text") {
-        tempId = "modal-resume";
-      } else if (this.id == "experience-text") {
-        tempId = "modal-experience";
-      } else if (this.id == "projects-text") {
-        tempId = "modal-projects";
-      } else if (this.id == "about-text") {
-        tempId = "modal-about";
-      }
       document.getElementById(tempId).style.display = "initial";
-      console.log("outside if");
-    }.bind(this), 700);
+
+      document.getElementById("typewriter-sentence").style.display = "none";
+    }.bind(this), 3000);
+
 
     console.log("outside setTimeout");
+  }
+
+  function reset_animation() {
+    var el = document.getElementById('typewriter-id');
+    el.style.animation = 'none';
+    el.offsetHeight;
+    el.style.animation = null;
   }
 
   function mouseOver() {
@@ -359,6 +394,8 @@
     target = document.getElementById("easter");
     if (this.id == "resume-text") {
       target.innerHTML = "PP 7/9 DARK";
+
+      // target.innerHTML = "PP " + temp +"/9 DARK";
     } else if (this.id == "experience-text") {
       target.innerHTML = "PP 5/6 PSYCHIC";
     } else if (this.id == "projects-text") {
