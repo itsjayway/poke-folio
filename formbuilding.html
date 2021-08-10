@@ -1,0 +1,34 @@
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pokemonpage/styles.css">
+  <!-- <script type = "text/javascript" src = "script.js"/></script> -->
+  <title>Jibran</title>
+</head>
+
+<div id="modal-final" class="modal-content-experience2 popup">
+  <a href="../index.html"><button id="final-close" class="close">Back to Home</button></a>
+  <h1 id="final-title" class="carc-title">You win!</h1>
+  <p id="final-desc">Please consider contacting me ^_^ Thanks for stopping by!</p>
+  <p>(Message is not encrypted!)</p>
+  <form action="email.php" method="get" enctype="text/plain">
+    <div class="centerme">
+      <div id="form-contents">
+        <span>
+          <span class="red">*</span>Name: <input type="text" name="sender_name" required> <br>
+        </span>
+        <span>
+          <span class="red">*</span>Email: <input type="email" name="sender_email" required> <br>
+        </span>
+        <span>
+          Company: <input type="text" name="sender_company"> <br>
+        </span>
+        <span>
+          <span class="red">*</span>Message: <textarea type="text" name="sender_message" required> </textarea><br>
+        </span>
+      </div><br>
+      <button id="submitf" type="submit">Send</button>
+    </div>
+
+  </form>
+</div>
