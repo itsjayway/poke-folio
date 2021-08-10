@@ -1,520 +1,371 @@
 :root {
-  --r1: 143;
-  --g1: 41;
-  --b1: 36;
-  --proj1: rgb(var(--r1), var(--g1), var(--b1));
-  /* --proj1: #215A9C; */
-  --r2: 96;
-  --g2: 39;
-  --b2: 32;
-  /* --proj2: rgb(var(--r2), var(--g2), var(--b2)); */
-  --proj2: #215A9C;
-  --r3: 40;
-  --g3: 75;
-  --b3: 99;
-  --proj3: rgb(var(--r3), var(--g3), var(--b3));
-  /* --proj3: #D65263; */
-  --r4: 0;
-  --g4: 118;
-  --b4: 180;
-  /* --proj4: rgb(var(--r4), var(--g4), var(--b4)); */
-  --proj4: #D65263;
+	--r1: 143;
+	--g1: 41;
+	--b1: 36;
+	--proj1: rgb(var(--r1), var(--g1), var(--b1));
+	--r2: 96;
+	--g2: 39;
+	--b2: 32;
+	--proj2: #215A9C;
+	--r3: 40;
+	--g3: 75;
+	--b3: 99;
+	--proj3: rgb(var(--r3), var(--g3), var(--b3));
+	--r4: 0;
+	--g4: 118;
+	--b4: 180;
+	--proj4: #D65263;
 }
-
 body {
-  transform: scale(.8);
+	transform: scale(.8);
 }
-
 @font-face {
-  font-family: 'pokefon';
-  src: url('fonts/pokemon-gb-font/PokemonGb-RAeo.ttf');
+	font-family: 'pokefon';
+	src: url('fonts/pokemon-gb-font/PokemonGb-RAeo.ttf');
 }
-
 .text {
-  font-family: "pokefon";
+	font-family: "pokefon";
 }
-
 #togg {
-  position: absolute;
-  z-index: 7;
+	position: absolute;
+	z-index: 7;
 }
-
 audio {
-  display: none;
+	display: none;
 }
-
 #hp {
-  top: 8.55vw;
-  left: 21.3vw;
-  position: absolute;
-  background-color: rgb(135, 201, 160);
-  width: 12vw;
-  height: 1.3vw;
-  z-index: 8;
-  border-radius: 400px;
+	top: 8.55vw;
+	left: 21.3vw;
+	position: absolute;
+	background-color: rgb(135, 201, 160);
+	width: 12vw;
+	height: 1.3vw;
+	z-index: 8;
+	border-radius: 400px;
 }
-
 #hp-num {
-  font-family: 'pokefon';
-  position: absolute;
-  font-size: 2vw;
-  top: 8.9vw;
-  left: 26.2vw;
-  bottom: 400vw;
+	font-family: 'pokefon';
+	position: absolute;
+	font-size: 2vw;
+	top: 8.9vw;
+	left: 26.2vw;
+	bottom: 400vw;
 }
-
 #attack {
-  display: none;
-  position: absolute;
-  top: 26vw;
-  left: 30vw;
-  width: 3vw;
-  height: 3vw;
-  background-color: blue;
-  border-radius: 50%;
+	display: none;
+	position: absolute;
+	top: 26vw;
+	left: 30vw;
+	width: 3vw;
+	height: 3vw;
+	background-color: blue;
+	border-radius: 50%;
 }
-
 #container {
-  position: relative;
+	position: relative;
 }
-
 .typewriter {
-  position: absolute;
-  /* border: solid red 1px; */
-  top: 42.0vw;
-  left: 6.9vw;
-  width: 55%;
-  height: 13.8vw;
-  z-index: 1;
+	position: absolute;
+	top: 42.0vw;
+	left: 6.9vw;
+	width: 55%;
+	height: 13.8vw;
+	z-index: 1;
 }
-
 .typewriter h1 {
-  z-index: 30;
-  display: none;
-  color: #000;
-  font-size: 2vw;
-  font-family: 'pokefon';
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange;
-  /* The typwriter cursor */
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .01em;
-  /* Adjust as needed */
-  animation:
-    typing 2s steps(30, end),
-    blink-caret .5s step-end infinite;
+	z-index: 30;
+	display: none;
+	color: #000;
+	font-size: 2vw;
+	font-family: 'pokefon';
+	overflow: hidden;
+	border-right: .15em solid orange;
+	white-space: nowrap;
+	margin: 0 auto;
+	letter-spacing: .01em;
+	animation:typing 2s steps(30, end),blink-caret .5s step-end infinite;
 }
-
-/* The typing effect */
 @keyframes typing {
-  from {
-    width: 0
-  }
-
-  to {
-    width: 100%
-  }
+	from {
+		width: 0
 }
-
-/* The typewriter cursor effect */
+	to {
+		width: 100%
+}
+}
 @keyframes blink-caret {
-  from, to {
-    border-color: transparent
-  }
-
-  50% {
-    /* border-color: orange */
-  }
+	from, to {
+		border-color: transparent
 }
-
+	50% {
+	}
+}
 #sentence {
-  font-size: 40px;
-  color: black;
+	font-size: 40px;
+	color: black;
 }
-
 #choice-container {
-  position: absolute;
-  /* border: solid black 1px; */
-  top: 40.9vw;
-  left: 6.5vw;
-  width: 55%;
-  height: 13.8vw;
-  z-index: 1;
+	position: absolute;
+	top: 40.9vw;
+	left: 6.5vw;
+	width: 55%;
+	height: 13.8vw;
+	z-index: 1;
 }
-
 #easter-info {
-  position: absolute;
-  /* border: solid black 1px; */
-  font-size: 2vw;
-  top: 37.9vw;
-  width: 24%;
-  height: 13.8vw;
-  left: 65.5vw;
-  line-height: 6vw;
-  text-overflow: ellipsis;
+	position: absolute;
+	font-size: 2vw;
+	top: 37.9vw;
+	width: 24%;
+	height: 13.8vw;
+	left: 65.5vw;
+	line-height: 6vw;
+	text-overflow: ellipsis;
 }
-
-/* TODO: add arrow or box around choice */
-#easter-resume {}
-
-#easter-experience {}
-
-#easter-projects {}
-
-#easter-about {}
-
 .choice {
-  font-size: 2.5vw;
-  font-family: "pokefon";
-  margin: 3vw;
+	font-size: 2.5vw;
+	font-family: "pokefon";
+	margin: 3vw;
 }
-
 .choice:hover {
-  color: gray;
+	color: gray;
 }
-
 #choice-grid {
-  z-index: -1;
-  display: grid;
-  grid-column-gap: 0px;
-  line-height: 0;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
+	z-index: -1;
+	display: grid;
+	grid-column-gap: 0px;
+	line-height: 0;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
 }
-
-#resume-text:hover {}
-
-#experience-text:hover {}
-
-#projects-text:hover {}
-
-#about-text:hover {}
-
 #modal-popup {
-  display: none;
-  z-index: 10;
-  width: 100%;
-  height: 90vw;
-  background-color: rgba(0, 0, 0, .7);
-  position: absolute;
-  top: 0;
-  /* display: flex; */
-  justify-content: center;
-  /* align-items: center; */
+	display: none;
+	z-index: 10;
+	width: 100%;
+	height: 90vw;
+	background-color: rgba(0, 0, 0, .7);
+	position: absolute;
+	top: 0;
+	justify-content: center;
 }
-
 #exp-list, #exp-list2, #exp-list3 {
-  list-style: none;
-  padding: 1vw;
-  /* width: 100%; */
+	list-style: none;
+	padding: 1vw;
 }
-
 #exp-list {
-  background-color: var(--proj2);
+	background-color: var(--proj2);
 }
-
 #exp-list2 {
-  background-color: var(--proj4);
+	background-color: var(--proj4);
 }
-
 .exp-title {
-  text-align: center;
-  font-family: "pokefon";
+	text-align: center;
+	font-family: "pokefon";
 }
-
 #about-list {
-  font-size: 2vw !important;
+	font-size: 2vw !important;
 }
-
 ul li {
-  font-size: 20px;
-  font-family: "Calibri", sans-serif;
+	font-size: 20px;
+	font-family: "Calibri", sans-serif;
 }
-
 #exp-list3 {
-  /* border: 1px black solid; */
-  background-color: rgb(243, 210, 114);
-  /* grid-area: 'auto-fill'; */
+	background-color: rgb(243, 210, 114);
 }
-
 #soft {
-  display: flex;
-  position: relative;
-  top: 0;
-  justify-content: center;
-  /* left: 25%; */
-  /* transform: translateX(-50%); */
-  /* top: 100%; */
+	display: flex;
+	position: relative;
+	top: 0;
+	justify-content: center;
 }
-
 #lst-div {
-  /* border: black 1px solid; */
-  position: relative;
-  display: inline-grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto;
-  justify-content: center;
-  width: 100%;
-  grid-gap: 0;
-  /* position: absolute; */
-  /* margin-left: ; */
-  /* left: 0;
-  right: 0; */
+	position: relative;
+	display: inline-grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto;
+	justify-content: center;
+	width: 100%;
+	grid-gap: 0;
 }
-
 ul {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
-
 .in-lst-div {
-  display: flex;
-  position: relative;
-  height: auto;
-  width: auto;
-  text-align: left;
-  /* border: black 1px solid; */
+	display: flex;
+	position: relative;
+	height: auto;
+	width: auto;
+	text-align: left;
 }
-
 .project-grid {
-  display: flex;
-  width: 50%;
-  padding: 10px;
-  grid-template-columns: 30%, 30%;
-  grid-template-columns: 20%, 20%, 20%;
-  grid-gap: auto;
-  position: relative;
+	display: flex;
+	width: 50%;
+	padding: 10px;
+	grid-template-columns: 30%, 30%;
+	grid-template-columns: 20%, 20%, 20%;
+	grid-gap: auto;
+	position: relative;
 }
-
 .tile-image {
-  display: none;
+	display: none;
 }
-
 .project-title {
-  font-size: 2.2vw;
-  font-family: "pokefon";
+	font-size: 2.2vw;
+	font-family: "pokefon";
 }
-
 .tilec {
-  color: #000;
-  text-align: center;
-  width: 100%;
-  max-height: 100%;
+	color: #000;
+	text-align: center;
+	width: 100%;
+	max-height: 100%;
 }
-
 .description {
-  display: block;
-  height: 40px;
-  font-size: 20px;
-  font-family: Calibri;
-  font-style: oblique;
-  width: 100%;
-  color: var(--tile-text);
-  margin-bottom: 0;
-  /* text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden; */
-  /* background: linear-gradient(0deg, #cdd9ed, #949cdf) */
+	display: block;
+	height: 40px;
+	font-size: 20px;
+	font-family: Calibri;
+	font-style: oblique;
+	width: 100%;
+	color: var(--tile-text);
+	margin-bottom: 0;
 }
-
 .d1, .d3, .d5 {
-  color: var(--proj4);
+	color: var(--proj4);
 }
-
 .d1 .description, .d3 .description, .d5 .description {
-  color: var(--proj1);
-  /* margin-bottom: 10px; */
+	color: var(--proj1);
 }
-
 .d2, .d4, .d6 {
-  color: var(--proj2);
+	color: var(--proj2);
 }
-
 .d2 .description, .d4 .description, .d6 .description {
-  color: var(--proj3);
-  /* margin-bottom: 10px; */
+	color: var(--proj3);
 }
-
 .description:hover {
-  /* background: linear-gradient(0deg, #cdd9ed, #949cdf)
-  overflow: visible;
-  white-space: normal;
-  height: auto; */
 }
-
 #modal-about {
-  margin-top: 2vw;
+	margin-top: 2vw;
 }
-
 .modal-content-resume {
-  display: none;
-  position: relative;
-  width: auto;
-  height: 84vw;
-  /* margin-top: 10%; */
-  /* background-color: rgba(255,255,255,1); */
-  background-color: white;
-  border-radius: 5px;
-  text-align: center;
-  padding: 0;
+	display: none;
+	position: relative;
+	width: auto;
+	height: 84vw;
+	background-color: white;
+	border-radius: 5px;
+	text-align: center;
+	padding: 0;
 }
 #submitf {
-  display: flex;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
+	display: flex;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
 }
-
-
 .modal-content-experience2 {
-  display: none;
-  position: absolute;
-  /* width: 90%; */
-  width: 60vw;
-  height: auto;
-  /* margin-bottom: auto; */
-  /* max-height: 44vw; */
-  /* overflow: scroll; */
-  /* background-color: rgba(255,255,255,1); */
-  background-color: white;
-  border-radius: 5px;
-  /* text-align: center; */
-  padding: 0;
+	display: none;
+	position: absolute;
+	width: 60vw;
+	height: auto;
+	background-color: white;
+	border-radius: 5px;
+	padding: 0;
 }
 .modal-content-experience {
-  display: none;
-  position: relative;
-  width: 90%;
-  height: auto;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  /* margin-bottom: auto; */
-  /* max-height: 44vw; */
-  /* overflow: scroll; */
-  /* background-color: rgba(255,255,255,1); */
-  background-color: white;
-  border-radius: 5px;
-  /* text-align: center; */
-  padding: 0;
+	display: none;
+	position: relative;
+	width: 90%;
+	height: auto;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	background-color: white;
+	border-radius: 5px;
+	padding: 0;
 }
-
 .modal-content-projects {
-  text-align: center;
-  margin-top: 0;
-  /* margin-top: 2vw; */
+	text-align: center;
+	margin-top: 0;
 }
-
 #about-div {
-  width: auto;
-  padding: 2vw;
+	width: auto;
+	padding: 2vw;
 }
-
 .about-desc {
-  font-family: Calibri;
-  font-size: 2.5vw;
+	font-family: Calibri;
+	font-size: 2.5vw;
 }
-
 .about-title {
-  margin-left: 4px;
-  font-family: 'pokefon';
+	margin-left: 4px;
+	font-family: 'pokefon';
 }
 .red {
-  font-family: Calibri;
-  font-variant-position: sub;
-  font-size: 20px;
-  color: red;
+	font-family: Calibri;
+	font-variant-position: sub;
+	font-size: 20px;
+	color: red;
 }
 .centerme {
-  position: relative;
-  justify-content: center;
+	position: relative;
+	justify-content: center;
 }
 #form-contents {
-  font-family: "pokefon";
-  display: none;
-  flex-direction: column;
-  /* margin: 0 auto 0 auto; */
-  max-height: inherit;
-  width: 80%;
-  text-align: ri
-  margin: auto;
-  padding: 2px;
-  /* justify-content: flex-end; */
+	font-family: "pokefon";
+	display: none;
+	flex-direction: column;
+	max-height: inherit;
+	width: 80%;
+	text-align: rimargin: auto;
 }
 #noenc, #final-desc {
-  font-family: "Ubuntu";
-  font-size: 2vw;
-  text-align: center;
+	font-family: "Ubuntu";
+	font-size: 2vw;
+	text-align: center;
 }
 #submit {
-  margin: auto;
+	margin: auto;
 }
-
 .popup {
-  position: absolute;
-  /* height: 100%; */
-  /* top: 4vw; */
-  /* visibility: hidden; */
+	position: absolute;
 }
-
 .button-group {
-  /* display: flex;
-  flex-direction: row */
-  position: relative;
-  margin: auto;
-  /* background-color: yellow; */
+	position: relative;
+	margin: auto;
 }
-
 #mute {
-  position: absolute;
-  width: 4vw;
-  height: 4vw;
+	position: absolute;
+	width: 4vw;
+	height: 4vw;
 }
-
 .carc-title {
-  text-align: center;
-  font-family: 'Lexend Mega', sans-serif;
+	text-align: center;
+	font-family: 'Lexend Mega', sans-serif;
 }
-
-#resume-close {}
-
-#projects-close {}
-
 #experience-close {
-  float: right;
+	float: right;
 }
-
-#about-close {}
-
 .close {
-  position: absolute;
-  top: 10px;
-  right: 0;
+	position: absolute;
+	top: 10px;
+	right: 0;
 }
-
 #resume-full {
-  right: 50px !important;
+	right: 50px !important;
 }
-
 .close2 {
-  position: absolute;
-  float: right;
-  right: 0;
-  margin-left: 10px;
+	position: absolute;
+	float: right;
+	right: 0;
+	margin-left: 10px;
 }
-
 #resume-pdf {
-  width: 80vw;
-  max-height: 100%;
-  overflow: scroll;
+	width: 80vw;
+	max-height: 100%;
+	overflow: scroll;
 }
-
 #base {
-  position: absolute;
-  right: 2vw;
-  top: -.6vw;
-  width: 100%;
+	position: absolute;
+	right: 2vw;
+	top: -.6vw;
+	width: 100%;
 }
