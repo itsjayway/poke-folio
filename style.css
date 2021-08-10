@@ -1,217 +1,181 @@
 :root {
-  --color1: #E7E3DA;
-  --color2: #7FD1B9;
-  --good-free: #7A6563;
-  --subtitle: #AFA082;
-  --tile-back: #AFA082;
-  --tile-text: #E5D4CE;
+	--color1: #E7E3DA;
+	--color2: #7FD1B9;
+	--good-free: #7A6563;
+	--subtitle: #AFA082;
+	--tile-back: #AFA082;
+	--tile-text: #5b5452;
 }
-
 * {
-  margin: 0;
-  padding: 0
+	margin: 0;
+	padding: 0
 }
-
 #navbar {
-  display: flex;
-  justify-content: flex-end;
-  position: fixed;
-  width: 100%;
-  font-family: "Josefin Sans", Helvetica;
-  background-color: rgba(0, 0, 0, .3);
-  z-index: 100
+	display: flex;
+	justify-content: flex-end;
+	position: fixed;
+	width: 100%;
+  height: auto;
+	font-family: "Josefin Sans", Helvetica;
+	background-color: rgba(0, 0, 0, .3);
+	z-index: 100
 }
-
 .nav-list {
-  display: flex;
-  margin-right: 2em
+	display: flex;
+	margin-right: 2em
 }
-
 ul {
-  list-style: none
+	list-style: none
 }
-
 li {
-  margin-top: 10px;
-  margin-bottom: 10px
+	margin-top: 10px;
+	margin-bottom: 10px
 }
-
+#navbar li {
+  font-size: 20px;
+}
 a {
-  padding: 10px;
-  text-decoration: none;
-  color: #f6ecf0
+	padding: 10px;
+	text-decoration: none;
+	color: #f6ecf0
 }
-
 a:hover {
-  background-color: var(--good-free);
-  color: #949cdf
+	background-color: var(--good-free);
+	color: #949cdf
 }
-
-
 .welcome-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(0deg, var(--color1), var(--color2));
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(0deg, var(--color1), var(--color2));
 }
-
 #projects {
-  background: linear-gradient(var(--color1), var(--color2));
-  width: 100%;
-  height: 100%;
-  z-index: -3
+	background: linear-gradient(var(--color1), var(--color2));
+	width: 100%;
+	height: 100%;
+	z-index: -3
 }
-
 #title-Jibran {
-  color: #FFF;
-  text-shadow: 3px 3px rgba(0, 0, 0, .3);
+	color: #FFF;
+	text-shadow: 3px 3px rgba(0, 0, 0, .3);
 }
-
 #subtitle, #title {
-  font-family: Ubuntu;
-  color: var(--good-free);
-  line-height: 0;
-  font-size: clamp(2vw, 4vw, 6vw);
-  text-shadow: 3px 3px rgba(0,0,0,.1);
-
+	font-family: Ubuntu;
+	color: var(--good-free);
+	line-height: 0;
+	font-size: clamp(2vw, 5vw, 8vw);
+	text-shadow: 3px 3px rgba(0, 0, 0, .1);
 }
-
 #subtitle {
-  margin-top: 1.3em;
-  font-size: clamp(1vw, 3vw, 3.2vw);
-  font-style: oblique;
-  color: var(--subtitle);
-  text-shadow: 3px 3px rgba(255, 255, 255, .1);
+	margin-top: 1.8em;
+	font-size: clamp(2.5vw, 3vw, 3.2vw);
+	font-style: oblique;
+	color: var(--subtitle);
+	text-shadow: 3px 3px rgba(255, 255, 255, .1);
 }
-
 #projects-title {
-  font-family: Ubuntu, Helvetica;
-  color: var(--good-free);
-  font-size: clamp(2vw, 4vw, 6vw);
-  text-align: center;
-  line-height: 2.7em;
-  text-shadow: 2px 2px rgba(0, 0, 0, .2)
+	font-family: Ubuntu, Helvetica;
+	color: var(--good-free);
+	font-size: clamp(2vw, 4vw, 6vw);
+	text-align: center;
+	line-height: 2.7em;
+	text-shadow: 2px 2px rgba(0, 0, 0, .2)
 }
-
 .projects-grid {
-  padding: 10px;
-  font-size: 40px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 33% 33% 33%;
-  grid-gap: auto;
-  position: relative;
+	padding: 10px;
+	font-size: 40px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 33% 33% 33%;
+	grid-gap: auto;
+	position: relative;
 }
-
 .tilec {
-  color: #000;
-  text-align: center;
-  width: 100%;
-  max-height: 100%;
+	color: #000;
+	text-align: center;
+	width: 100%;
+	max-height: 100%;
 }
-
 .tilec:hover {
-  color: #f6ecf0
+	color: #f6ecf0
 }
-
-.tilec:hover .description {
-  background: 0 0;
+.tilec:hover {
+	background: 0 0;
 }
-
 .tile-image {
-  max-width: 90%;
-  height: 6em
+	max-width: 90%;
+	height: 6em
 }
-
 h2 {
-  font-size: 2.4vw;
-  font-family: 'Baloo Chettan 2';
-  background: var(--good-free);
+	font-size: 2.4vw;
+	font-family: 'Baloo Chettan 2';
+	background: var(--good-free);
 }
-
-/* .fix {
-  width: auto;
-  max-height: 6em;
-} */
-
 .row1, .row2, .row3 {
-  background-color: var(--tile-back);
+	background-color: var(--tile-back);
 }
-
-
 .footer {
-  position: sticky;
-  left: 0;
-  bottom: 0;
-  height: auto;
-  width: 100%;
-  background-color: rgba(0, 0, 0, .5);
-  background: var(--color2);
-  color: #fff;
-  text-align: center
+	position: sticky;
+	left: 0;
+	bottom: 0;
+	height: auto;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .5);
+	background: var(--color2);
+	color: #fff;
+	text-align: center
 }
-
 #footer-title {
-  padding: 20px;
-  font-family: Ubuntu;
-  text-shadow: 2px 2px rgba(0, 0, 0, .5)
+	padding: 20px;
+	font-family: Ubuntu;
+	text-shadow: 2px 2px rgba(0, 0, 0, .5)
 }
-
 #total-footer {
-  background-color: rgba(0, 0, 0, .3)
+	background-color: rgba(0, 0, 0, .3)
 }
-
 #links {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto
+	display: grid;
+	justify-content: center;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto
 }
-
 #github {
-  width: 30px;
-  height: 30px
+	width: 30px;
+	height: 30px
 }
-
 #linkedin {
-  width: 30px;
-  height: 30px
+	width: 30px;
+	height: 30px
 }
-
 #github-span, #linkedin-span {
-  transition-property: transform;
-  transition-duration: .3s;
-  transition-timing-function: ease-out;
-  transition-delay: 0s;
-  padding: 10px;
-  font-family: "Josefin Sans"
+	transition-property: transform;
+	transition-duration: .3s;
+	transition-timing-function: ease-out;
+	transition-delay: 0s;
+	padding: 10px;
+	font-family: "Josefin Sans"
 }
-
 a.no-highlight:hover {
-  text-decoration: none
+	text-decoration: none
 }
-
 .description {
-  display: block;
-  height: 40px;
-  font-size: 1.7vw;
-  font-family: Calibri;
-  font-style: oblique;
-  width: 100%;
-  color: var(--tile-text);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  /* background: linear-gradient(0deg, #cdd9ed, #949cdf) */
+	display: block;
+	height: 40px;
+	font-size: 1.7vw;
+	font-family: Calibri;
+	font-style: oblique;
+	width: 100%;
+	color: #2d2a29;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
-
 .description:hover {
-  background: linear-gradient(0deg, #cdd9ed, #949cdf)
-  overflow: visible;
-  white-space: normal;
-  height: auto;
+	overflow: visible;
+	white-space: normal;
+	height: auto;
 }
