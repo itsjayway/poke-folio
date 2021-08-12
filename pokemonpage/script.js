@@ -1,57 +1,31 @@
 function toggleSound(img) {
   img.src = img.src == "http://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Speaker_Icon.svg/500px-Speaker_Icon.svg.png" ? "https://cdn2.iconfinder.com/data/icons/picons-essentials/57/music_off-512.png" :
     "http://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Speaker_Icon.svg/500px-Speaker_Icon.svg.png";
-  // var sound = document.getElementById("welcomeSound");
-  // sound.muted = sound.muted == true ? false : true;
   if (img.src == "http://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Speaker_Icon.svg/500px-Speaker_Icon.svg.png") {
     resumeAll();
   } else {
     muteAll();
   }
 }
-window.onload = function() {
-  // collecting elements
-  var welcomeSound = document.getElementById("welcomeSound");
-  var welcomeTxt = document.getElementById("resume-text");
-  //playing welcome sound on mouse over
-  welcomeTxt.onload = function() {
-    welcomeSound.play();
-    return false;
-  };
-};
+
+function toggleMusic(img) {
+  var music_on = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Music_run.svg/640px-Music_run.svg.png";
+  var music_off = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Music_cancel.svg/640px-Music_cancel.svg.png"
+  img.src = img.src == music_on ? music_off :
+    music_on;
+  if (img.src == music_on) {
+    resumeAll();
+  } else {
+    document.getElementById("welcomeSound").pause();
+  }
+
+
+}
 
 function playAttack() {
   var attack_sound = document.getElementById("attack-sound");
   attack_sound.play();
 }
-
-// sorry you had to see these...
-document.getElementById("resume-text").addEventListener("mouseover", mouseOver);
-document.getElementById("resume-text").addEventListener("mouseout", mouseOut);
-
-document.getElementById("experience-text").addEventListener("mouseover", mouseOver);
-document.getElementById("experience-text").addEventListener("mouseout", mouseOut);
-
-document.getElementById("projects-text").addEventListener("mouseover", mouseOver);
-document.getElementById("projects-text").addEventListener("mouseout", mouseOut);
-
-document.getElementById("about-text").addEventListener("mouseover", mouseOver);
-document.getElementById("about-text").addEventListener("mouseout", mouseOut);
-
-
-document.getElementById("resume-text").addEventListener("click", showModal);
-document.getElementById("experience-text").addEventListener("click", showModal);
-document.getElementById("projects-text").addEventListener("click", showModal);
-document.getElementById("about-text").addEventListener("click", showModal);
-
-document.getElementById("modal-popup").addEventListener("click", hideModal);
-
-document.getElementById("resume-close").addEventListener("click", showChoices);
-document.getElementById("experience-close").addEventListener("click", showChoices);
-document.getElementById("projects-close").addEventListener("click", showChoices);
-document.getElementById("about-close").addEventListener("click", showChoices);
-document.getElementById("final-close").addEventListener("click", hideModal);
-
 
 let close_button = document.getElementById("resume-close");
 close_button.addEventListener("click", hideModal);
@@ -66,12 +40,14 @@ function hideModal() {
   hideId = tempId;
   document.getElementById("modal-popup").style.display = "none";
   document.getElementById(hideId).style.display = "none";
+  document.getElementById("typewriter-sentence").style.display = "none";
   //test if hp-num == 0
   // then pop up final modal
   if (this.id != "resume-close") {
-    if (parseInt(document.getElementById("hp-num").innerHTML) == 0) {
+    if (parseInt(document.getElementById("hp-num").innerHTML) <= 0) {
       document.getElementById("modal-popup").style.display = "flex";
       document.getElementById("modal-final").style.display = "initial";
+      document.getElementById("form-contents").style.display = "initial";
     }
   }
 
@@ -81,35 +57,49 @@ function hideModal() {
 function showModal() {
   attack();
   console.log("after attack");
-
+  if (this.id == "resume-text") {
+    tempId = "modal-resume";
+    typewriter_contents = "Jibran showed his resume!";
+  } else if (this.id == "experience-text") {
+    tempId = "modal-experience";
+    typewriter_contents = "Jibran did a back flip!";
+  } else if (this.id == "projects-text") {
+    tempId = "modal-projects";
+    typewriter_contents = "Jibran compiled a project!";
+  } else if (this.id == "about-text") {
+    tempId = "modal-about";
+    typewriter_contents = "Jibran told his past!";
+  }
+  var sent = document.getElementById("typewriter-sentence");
+  sent.style.display = "flex";
+  var typewriter_contents;
+  sent.innerHTML = typewriter_contents;
+  reset_animation();
 
   setTimeout(function() {
-    var ppNum;
-    console.log("inside timeout");
     document.getElementById("modal-popup").style.display = "flex";
-    if (this.id == "resume-text") {
-      tempId = "modal-resume";
-    } else if (this.id == "experience-text") {
-      tempId = "modal-experience";
-    } else if (this.id == "projects-text") {
-      tempId = "modal-projects";
-    } else if (this.id == "about-text") {
-      tempId = "modal-about";
-    }
     document.getElementById(tempId).style.display = "initial";
-    console.log("outside if");
-  }.bind(this), 700);
+    document.getElementById("typewriter-sentence").style.display = "none";
+  }.bind(this), 3000);
+
 
   console.log("outside setTimeout");
+}
+
+function reset_animation() {
+  var el = document.getElementById('typewriter-id');
+  el.style.animation = 'none';
+  el.offsetHeight;
+  el.style.animation = null;
 }
 
 function mouseOver() {
   temp = this.innerHTML;
   document.getElementById("item-select").play();
-  // this.innerHTML = this.id;
   target = document.getElementById("easter");
   if (this.id == "resume-text") {
     target.innerHTML = "PP 7/9 DARK";
+    // target.innerHTML = "PP " + temp +"/9 DARK";
   } else if (this.id == "experience-text") {
     target.innerHTML = "PP 5/6 PSYCHIC";
   } else if (this.id == "projects-text") {

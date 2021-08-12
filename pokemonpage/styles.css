@@ -242,8 +242,7 @@ ul {
 .d2 .description, .d4 .description, .d6 .description {
 	color: var(--proj3);
 }
-.description:hover {
-}
+
 #modal-about {
 	margin-top: 2vw;
 }
@@ -263,30 +262,29 @@ ul {
 	margin-left: auto;
 	margin-right: auto;
 }
-.modal-content-experience2 {
-	display: none;
+.modal-content-close {
 	position: absolute;
 	width: 60vw;
-	height: auto;
-	background-color: white;
-	border-radius: 5px;
-	padding: 0;
 }
-.modal-content-experience {
-	display: none;
+.modal-content-experience, .modal-content-projects {
 	position: relative;
 	width: 90%;
-	height: auto;
 	margin-top: 10%;
 	margin-bottom: 10%;
+}
+/* .modal-content-projects {
+	text-align: center;
+	margin-top: 0;
+} */
+
+.modal-shared {
+	display: none;
+	height: auto;
 	background-color: white;
 	border-radius: 5px;
 	padding: 0;
 }
-.modal-content-projects {
-	text-align: center;
-	margin-top: 0;
-}
+
 #about-div {
 	width: auto;
 	padding: 2vw;
@@ -377,9 +375,6 @@ ul {
 	z-index: -5;
 }
 #watermark {
-	/* border: black 1px solid;
-	height: auto;
-	/* bottom: 9vw; */
 	right: 0;
 	position: fixed; */
 }
