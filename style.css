@@ -29,11 +29,13 @@ ul {
 }
 li {
 	margin-top: 10px;
-	margin-bottom: 10px
+	margin-bottom: 10px;
+	margin-left: 10px;
+
 }
 #navbar li {
 	font-size: 20px;
-	
+
 }
 a {
 	padding: 10px;
@@ -42,7 +44,11 @@ a {
 }
 a:hover {
 	background-color: var(--good-free);
-	color: #949cdf
+	color: gray;
+}
+li:hover a {
+	background-color: rgba(0,0,0,.1);
+	color: white;
 }
 .welcome-section {
 	display: flex;

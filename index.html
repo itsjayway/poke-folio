@@ -3,11 +3,10 @@
 <main>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="main.js"></script>
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/> -->
   </head>
   <body>
@@ -20,9 +19,9 @@
         <!-- <li><a href="#top">Top</a></li> -->
         <!-- <li><a href="#projects-title">Projects</a></li> -->
         <!-- <li><a href="#contact">Contact</a></li> -->
-        <li><a href="https://web.njit.edu/~jga26/download/resume.pdf" target="_blank"><i id="resume-icon" class="fa fa-file-text" aria-hidden="true"></i></a></li>
-        <li><a href="https://harp.njit.edu/~jga26/pokemonpage/index.html"><i id="game-icon" class="fa fa-gamepad"></i></a></li>
-        <li><a href="otherlinks.html"><i id="more-icon" class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+        <li><a href="https://web.njit.edu/~jga26/download/resume.pdf" target="_blank"><span id="resume-icon"><i class="fa fa-file-text" aria-hidden="true"></i></span></a></li>
+        <li><a href="https://harp.njit.edu/~jga26/pokemonpage/index.html"><span id="game-icon"><i class="fa fa-gamepad"></i></span></a></li>
+        <li><a href="otherlinks.html"><span id="more-icon"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
       </ul>
     </nav>
     <section class="welcome-section" id="welcome-section">
@@ -100,6 +99,7 @@
     </section>
   </body>
 </main>
+<script type="text/javascript" src="main.js"></script>
 <script>
   let resume_icon = document.getElementById("resume-icon");
   let game_icon = document.getElementById("game-icon");
@@ -107,5 +107,9 @@
   resume_icon.addEventListener("mouseover", showText);
   game_icon.addEventListener("mouseover", showText);
   more_icon.addEventListener("mouseover", showText);
+
+  resume_icon.addEventListener("mouseout", hideText);
+  game_icon.addEventListener("mouseout", hideText);
+  more_icon.addEventListener("mouseout", hideText);
 </script>
 <!-- Jibran Absarulislam 2021 -->
