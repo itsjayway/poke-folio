@@ -1,0 +1,67 @@
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+@media (max-width: 300px) {
+
+}
+#nav-title {
+  left: 25px;
+  font-family: Helvetica;
+  font-size: 25px;
+}
+#navbar {
+  font-family: sans-serif;
+  position: fixed;
+  top: 30px;
+  left: 10px;
+  width: 310px;
+  min-width: 306px;
+  height: 100%;
+}
+#navbar ul {
+    height: 88%;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    line-spacing: 3.5em;
+
+}
+/* nav {
+  display: block;
+}
+ */
+#main-doc {
+  font-family: "Courier New";
+  position: absolute;
+  margin-left: 200px;
+}
+
+table, th, td {
+  font-family: Helvetica;
+  border: 1px solid black;
+}
+#name {
+  font-size = 5px;
+  font-family = "Lucida Console";
+}
+caption {
+  border: 1px solid black;
+  background-color: yellow;
+}
+th, td {
+  padding: 10px;
+}
+#first_row {
+  border-spacing: 5px;
+  background-color: cyan;
+}

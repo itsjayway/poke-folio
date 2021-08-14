@@ -1,0 +1,28 @@
+#navbar {
+	display: flex;
+	justify-content: flex-end;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .2);
+}
+.nav-list {
+	display: flex;
+	margin-right: 2em;
+}
+
+#navbar li {
+	margin-top: 1vw;
+	font-size: 2.3vw;
+	list-style: none;
+	margin-left: 1vw;
+	background-color:
+}
+.container {
+	margin-top: 2vw;
+}
+
+a, a:hover {
+	color: black;
+	text-decoration: none;
+}
