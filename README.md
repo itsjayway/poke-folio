@@ -5,5 +5,4 @@
 
 ###### Please view at: https://harp.njit.edu/~jga26/
 
-![](demo-pic.jpg)
 ![](demo2-pic.jpg)
